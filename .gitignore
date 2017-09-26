@@ -33,3 +33,13 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+*.pyc
+*~
+.directory
+.env
+*.tar.gz
+.project
+.pydevproject
+*.db
+*.sqlite3

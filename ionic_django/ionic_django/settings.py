@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'fcm_django'
 ]
 
 MIDDLEWARE = [
@@ -99,6 +101,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ],
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -118,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+FCM_DJANGO_SETTINGS = {
+        "FCM_SERVER_KEY": "AAAAIVJYd3g:APA91bFxqThkbmATEv3Qc_ourV7qo6Zxxe9eD4S2SdIRZZoJCrr2LD8zJMkaWG0thg95uU_jgBhU8-JMomJV3ZKbknDtHk2IVZC9Dz3yotQ1hB75vPttmDyXixlgIDWpRhiyfZUnkoFd", # [your api key]
+        "ONE_DEVICE_PER_USER": False,
+        "DELETE_INACTIVE_DEVICES": False,
+}
